@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<!-- PyScriptを読み込む -->
+<script type="module" src="https://pyscript.net/releases/2025.8.1/core.js" ></script>
+<!--Pythonのプログラム -->
+<script type="mpy">
+    # --- ここから実際のPythonコードを記述
+    import js
+    import random
+    # -- サイコロの目を選ぶ
+    image_url = random.choice([
+    "https://n3s.nadesi.com/image.php?f=697.png ", # 宝石
+     "https://n3s.nadesi.com/image.php?f=698.png" # 空箱
+])
+    r = random.randint(1, 6)
+    # -- 画像を表示するHTMLを動的に生成して表示
+    js.document.write(f"<img src='{image_url}'>")
+    # --- ここまでがPythonコード
+</script>
